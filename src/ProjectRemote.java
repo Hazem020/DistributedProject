@@ -40,7 +40,7 @@ public class ProjectRemote extends UnicastRemoteObject implements ProjectInterfa
     @Override
     public Set<String> RepeatedWords(String s) throws RemoteException {
         s = s.replaceAll("[^a-zA-Z0-9]", " ");
-        Set<String> repeatedWords = new HashSet<String>();
+        Set<String> repeatedWords = new HashSet<>();
         String[] words = s.split(" ");
         for (int i = 0; i < words.length; i++) {
             if(words[i].isBlank() || words[i].length()==1) continue;
@@ -55,10 +55,10 @@ public class ProjectRemote extends UnicastRemoteObject implements ProjectInterfa
     }
 
     @Override
-    public HashMap<String, Integer> wordCount(String s) throws Exception {
+    public HashMap<String, Integer> wordCount(String s){
         s = s.replaceAll("[^a-zA-Z0-9]", " ");
         String[] words = s.split(" ");
-        HashMap<String, Integer> wordCount = new HashMap<String,Integer>();
+        HashMap<String, Integer> wordCount = new HashMap<>();
         for (String word : words) {
             if(word.isBlank() || word.length()==1) continue;
             if (wordCount.containsKey(word)) wordCount.put(word, wordCount.get(word) + 1);
