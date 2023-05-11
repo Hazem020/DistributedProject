@@ -9,12 +9,12 @@ public class ProjectRemote extends UnicastRemoteObject implements ProjectInterfa
     }
 
     @Override
-    public int CountChars(String s) throws RemoteException {
+    public int Count(String s) throws RemoteException {
         return s.replace("\n", "").replace("\r", "").length();
     }
 
     @Override
-    public String longestWord(String s) throws RemoteException {
+    public String longest(String s) throws RemoteException {
         s = s.replaceAll("[^a-zA-Z0-9]", " ");
         String longest = "";
         for (String word : s.split(" ")) {
@@ -26,7 +26,7 @@ public class ProjectRemote extends UnicastRemoteObject implements ProjectInterfa
     }
 
     @Override
-    public String ShortestWord(String s) throws RemoteException {
+    public String shortest(String s) throws RemoteException {
         s = s.replaceAll("[^a-zA-Z0-9]", " ");
         String Shortest = "______________________________________________________";
         for (String word : s.split(" ")) {
@@ -38,7 +38,7 @@ public class ProjectRemote extends UnicastRemoteObject implements ProjectInterfa
         return Shortest;
     }
     @Override
-    public Set<String> RepeatedWords(String s) throws RemoteException {
+    public Set<String> repeatedwords(String s) throws RemoteException {
         s = s.replaceAll("[^a-zA-Z0-9]", " ");
         Set<String> repeatedWords = new HashSet<>();
         String[] words = s.split(" ");
@@ -55,7 +55,7 @@ public class ProjectRemote extends UnicastRemoteObject implements ProjectInterfa
     }
 
     @Override
-    public HashMap<String, Integer> wordCount(String s){
+    public HashMap<String, Integer> Repeat(String s){
         s = s.replaceAll("[^a-zA-Z0-9]", " ");
         String[] words = s.split(" ");
         HashMap<String, Integer> wordCount = new HashMap<>();

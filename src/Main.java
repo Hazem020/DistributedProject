@@ -6,6 +6,6 @@ public class Main {
         String filePath = "E:\\data.txt";
         String data = new String(Files.readAllBytes(Paths.get(filePath)));
         ProjectRemote projectRemote = new ProjectRemote();
-        System.out.println(projectRemote.RepeatedWords(data));
+        System.out.println(projectRemote.repeatedwords(data));
     }
 }
