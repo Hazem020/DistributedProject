@@ -16,5 +16,3 @@ Use the following functions with these exact names :
 5. Repeat: for the number of times each word appeared.
 
 These methods will be implemented using Rmi (Remote method invocation) but in the local machine.
-
-![image](https://github.com/Hazem020/DistributedProject/assets/59257408/ae7d9cd0-a0a1-47dd-90df-98a72104e10c)
