@@ -41,7 +41,7 @@ public class Client {
 
             System.out.println("----------------------------");
 
-            System.out.println("The Reapetation Number Of Each Word Is : " + stub.Repeat(data));
+            System.out.println("The Repetition Number Of Each Word Is : " + stub.Repeat(data));
 
             System.out.println("----------------------------");
 
